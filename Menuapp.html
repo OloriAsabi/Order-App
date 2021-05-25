@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>The Ring Restaurant</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" />
+        <link rel="stylesheet" href="TheRestaurantAPP.css" type="text/css" />
+    </head>
+
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="TheRestaurantAPP.html">Home</a></li>
+                    <li><a href="Menuapp.html">Menu</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <aside><img src="images/download.png" class="banner" alt="Restaurant Logo"></aside>
+        
+
+        <article>
+            <h2>Menu Options</h2>
+            <div class="underline"></div>
+
+            <section class="menu">
+                <div class="pie">
+                    <img src="images/mt-0448-home-gallery-img1.jpg" class="image" alt="Apple Pie" />  
+                    <div class="columns">
+                    <div><span class="icon"><i class="fas fa-utensils"></i></span></div>
+                      <p class="title"><span>Apple pie</span></p>
+                      <p class="price"><span>$12.95</span></p>
+                      <button data-order="mt-0448-home-gallery-img1">Order</button>
+                    </div>
+                </div>
+                
+                <div class="pie">
+                    <img src="images/item-2.jpg" class="image" alt="" />  
+                    <div class="columns">
+                    <div><span class="icon"><i class="fas fa-utensils"></i></span></div>
+                      <p class="title"><span>Burger</span></p>
+                      <p class="price"><span>$20.95</span></p>
+                      <button data-order="item-2">Order</button>
+                    </div>
+                </div>
+
+                <div class="pie">
+                    <img src="images/item-10.jpg" class="image" alt="Apple Pie" />  
+                    <div class="columns">
+                    <div><span class="icon"><i class="fas fa-utensils"></i></span></div>
+                      <p class="title"><span>Steak</span></p>
+                      <p class="price"><span>$25.95</span></p>
+                      <button data-order="item-10">Order</button>
+                    </div>
+                </div>
+                
+                
+                <div class="pie">
+                    <img src="images/mt-0448-home-gallery-img2.jpg" class="image" alt="Apple Pie" />  
+                    <div class="columns">
+                    <div><span class="icon"><i class="fas fa-utensils"></i></span></div>
+                      <p class="title"><span> Raw steak</span></p>
+                      <p class="price"><span>$12.95</span></p>
+                      <button data-order="mt-0448-home-gallery-img2">Order</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </article>
+       </main>
+       <script>
+           window.addEventListener("DOMContentLoaded", function(e){
+               const orderButtons = document.querySelectorAll("button[data-order]")
+
+               orderButtons.forEach(function(button){
+                   button.addEventListener("click", function(e){
+                       const button = e.currentTarget;
+                       const container = button.parentNode;
+
+                       const order = {
+                           id: (id = button.getAttribute("data-order")),
+                           title: container.querySelector(".title").innerText,
+                           price: container.querySelector(".price").innerText,
+                         };
+                         
+                        localStorage.setItem("order", JSON.stringify(order));
+                    
+                        const url = window.location.href.replace("Menuapp.html", "Orderapp.html");
+                        window.location.href = url;
+                   });
+               });
+           });
+       </script>
+
+
+    </body>
+</html>

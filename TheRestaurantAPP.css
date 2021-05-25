@@ -1,0 +1,144 @@
+*{
+    padding: 0%;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+  }
+
+  nav a:visited,
+  nav a:link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav > ul{
+     display: inline; 
+     padding: 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+  }
+main {
+  
+    margin: 1rem;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+    
+  }
+
+
+
+aside{
+    padding: 2rem;
+    text-align: center;
+}
+
+article > h2{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+    color:  hsl(17, 90%, 62%);
+}
+.underline{
+    height: 0.5rem;
+    width: 9rem;
+    background:hsl(17, 90%, 62%) ;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+
+.icon{
+    margin: 5px;
+    font-size: 2rem;
+
+}
+
+
+.btn{
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(248, 240, 240);
+    color: #000;
+}
+
+ .pie {
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    display: flex;
+  }
+
+  aside {
+    margin-left: 2%;
+  }
+
+  .columns-desktop {
+    display: flex;
+  }
+}
+  
+  .pie img {
+    width: 100%;
+  }
+  
+  .pie .title {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .pie .price {
+    text-align: center;
+  }
+  
+  .pie .columns {
+    width: 100%;
+  }
+  
+  .pie .columns div {
+    width: 50%;
+  }
+  
+  .pie button {
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #f6aeae;
+    border-radius: 3px;
+    color: #fff;
+    
+  }
+  
